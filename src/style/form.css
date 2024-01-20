@@ -1,0 +1,24 @@
+@layer base {
+  [type="text"],
+  input:where(:not([type])),
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full rounded-sm border border-gray-300 focus:border-purple-600 focus:ring-1 focus:ring-purple-600 shadow-sm;
+  }
+  [type="checkbox"],
+  [type="radio"] {
+    @apply rounded-sm border border-gray-300 shadow-sm bg-purple-600 checked:bg-purple-600 text-purple-600 hover:bg-purple-600 focus:ring-1 focus:ring-purple-600;
+  }
+}

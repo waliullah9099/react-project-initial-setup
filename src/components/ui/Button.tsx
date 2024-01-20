@@ -13,7 +13,7 @@ type TButton = DetailedHTMLProps<
   TButtonOptions;
 
 const Button = forwardRef<TRef, TButton>(
-  ({ className, varient = "solid", ...rest }, ref) => {
+  ({ className, varient = "solid", children, ...rest }, ref) => {
     const getVarient = (varient: TVarient) => {
       switch (varient) {
         case "outline":
@@ -32,7 +32,7 @@ const Button = forwardRef<TRef, TButton>(
           ref={ref}
           className={cn(getVarient(varient), className)}
         >
-          Click
+          {children}
         </button>
       </div>
     );
